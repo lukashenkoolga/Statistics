@@ -40,6 +40,7 @@ public class StatsService {
 
     public int findMinAvg(int[] sales) {
         int quantity = 0;
+        int Avg = findAvg(sales);
         for (int sale : sales) {
             if (sale < findAvg(sales)) {
 
@@ -51,8 +52,9 @@ public class StatsService {
 
     public int findMaxAvg(int[] sales) {
         int quantity = 0;
+        int Avg = findAvg(sales);
         for (int sale : sales) {
-            if (sale > findAvg(sales)) {
+            if (sale > Avg) {
 
                 quantity += 1;
             }
